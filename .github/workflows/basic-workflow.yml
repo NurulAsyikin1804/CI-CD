@@ -1,0 +1,23 @@
+
+name: Basic CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - feature/linux-practice
+  workflow_dispatch:
+
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display message
+        run: echo "GitHub Actions is working!"
+
+      - name: Check repository
+        run: echo "Repository checkout completed."
